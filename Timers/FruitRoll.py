@@ -2,7 +2,7 @@ from PIL import Image, ImageTk
 import time
 import json
 
-imagePath = 'Images\\FruitRoll.jpg'
+imagePath = 'Images\\FruitRoll.png'
 
 def delay_method(savedatajsonpath):
     with open(savedatajsonpath, 'r') as f:
