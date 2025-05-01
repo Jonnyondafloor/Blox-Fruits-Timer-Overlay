@@ -1,7 +1,7 @@
 {
     "Version": "1.0.0",
     "Auther": "Jonnyondafloor",
-    "Name": "Blox-Fruits-Overlay",
+    "Name": "Blox-Fruits-Timer-Overlay",
     "PythonLibraries": [
         "pillow"
     ],
