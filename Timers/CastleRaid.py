@@ -1,7 +1,7 @@
 import time
 from PIL import Image, ImageTk
 
-imagePath = 'Images\\CastleRaid.jpg'
+imagePath = 'Images\\CastleRaid.png'
 
 def delay_method(_):
     now = time.time()
