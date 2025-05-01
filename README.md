@@ -11,6 +11,9 @@ Display timers for important events such as: Rolling, Castle Raid, Elite Pirate,
 **planned Timers**
 - General
   - Fruit Spawn
+  - Silver Chest
+  - Golden Chest
+  - Diamond Chest
 - Bosses
   - First Sea
     - Gorilla King
