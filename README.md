@@ -2,18 +2,15 @@
 Display timers for important events such as: Rolling, Castle Raid, Elite Pirate, and Full Moon so you know when things should be happening.
 
 **Current Timers**
-- Rolling
-- Castle Raid
-- Elite Pirates
-- Full Moon
-
-**planned Timers**
 - General
   - Rolling
-  - Fruit Spawn
   - Castle Raid
   - Elite Pirates
   - Full Moon
+
+**planned Timers**
+- General
+  - Fruit Spawn
 - Bosses
   - First Sea
     - Gorilla King
