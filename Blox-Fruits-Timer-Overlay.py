@@ -9,8 +9,9 @@ class Timer:
     def __init__(self,
                  master: tk.Tk | tk.Frame | tk.Toplevel,
                  image: Image.Image,
-                 delay_method,
-                 reset_method
+                 delay_method, # A Function that returns the length of time the timer should wait
+                 reset_method, # A Function that returns the length of time the timer should wait after clicking reset
+                 auto: int | None = None # time in seconds after the ready that it will reset automatically
                  ):
         
         self.master = master
@@ -71,10 +72,16 @@ root.attributes('-transparentcolor', '#010101')
 root.geometry('1650x60+179+0')
 root.config(bg='#010101')
 
-from Timers import FruitRoll, CastleRaid, ElitePirate, FullMoon
+from Timers import FruitRoll, CastleRaid, ElitePirate, FullMoon, SilverChest, GoldenChest, DiamondChest
 
+# Fruit
 Timer(root, FruitRoll.image, FruitRoll.delay_method, FruitRoll.reset_method)
 Timer(root, CastleRaid.image, CastleRaid.delay_method, CastleRaid.reset_method)
+# Money
+Timer(root, SilverChest.image, SilverChest.delay_method, SilverChest.reset_method)
+Timer(root, GoldenChest.image, GoldenChest.delay_method, GoldenChest.reset_method)
+Timer(root, DiamondChest.image, DiamondChest.delay_method, DiamondChest.reset_method)
+# Misc
 Timer(root, ElitePirate.image, ElitePirate.delay_method, ElitePirate.reset_method)
 Timer(root, FullMoon.image, FullMoon.delay_method, FullMoon.reset_method)
 
