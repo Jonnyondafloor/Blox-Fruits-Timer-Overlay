@@ -8,7 +8,7 @@ Display timers for important events such as: Rolling, Castle Raid, Elite Pirate,
 - Full Moon
 
 <details>
-<summary>**planned Timers**</summary>
+**<summary>planned Timers</summary>**
 - General
   - Rolling
   - Castle Raid
