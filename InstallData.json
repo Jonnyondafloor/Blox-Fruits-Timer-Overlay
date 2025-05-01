@@ -1,22 +1,22 @@
 {
     "Version": "1.0.0",
     "Auther": "Jonnyondafloor",
-    "Name": "Blox-Fruits-Overlay",
+    "Name": "Blox-Fruits-Timer-Overlay",
     "PythonLibraries": ["pillow"],
     "Files": {
-        "Images": [
-            "CastleRaid.jpg",
-            "ElitePirate.jpg",
-            "FruitRoll.jpg",
-            "FullMoon.jpg"
-        ],
-        "Timers": [
-            "CastleRaid.py",
-            "ElitePirate.py",
-            "FruitRoll.py",
-            "FullMoon.py",
-            "__init__.py"
-        ],
+        "Images": {
+            "CastleRaid.jpg": false,
+            "ElitePirate.jpg": false,
+            "FruitRoll.jpg": false,
+            "FullMoon.jpg": false
+        },
+        "Timers": {
+            "CastleRaid.py": false,
+            "ElitePirate.py": false,
+            "FruitRoll.py": false,
+            "FullMoon.py": false,
+            "__init__.py": false
+        },
         "Blox Fruits Overlay Timer.py": true,
         "SaveData.json": false
     }
