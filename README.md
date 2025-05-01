@@ -6,7 +6,7 @@ Display timers for important events such as: Rolling, Castle Raid, Elite Pirate,
 1. Download the latest version of python: https://www.python.org/downloads/
 2. follow the instructions in the installer and make sure you check the box to add to path
 ## App
-1. Download Blox-Fruits-Timer-Overlay-Portable.zip: https://github.com/Jonnyondafloor/Blox-Fruits-Timer-Overlay/releases/latest
+1. Download [Blox-Fruits-Timer-Overlay-Portable.zip](https://github.com/Jonnyondafloor/Blox-Fruits-Timer-Overlay/releases/latest)
 3. Unzip the app
 4. open terminal
 5. navigate to the app's directory
