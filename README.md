@@ -35,59 +35,16 @@ Display timers for important events such as: Rolling, Castle Raid, Elite Pirate,
   - Elite Pirate: 8 Minutes and 45 Seconds (reset this timer when an elite pirate has been defeated)
   - Full Moon: 3 hours and 12 minutes (reset this timer when the full moon rises)
 
-**Current Timers**
-- General
-  - Rolling
-  - Castle Raid
-  - Elite Pirates
-  - Full Moon
+# Roadmap
+**V1.2: Image Rework**
+- Rework Icons
+   - Silver Chest
+   - Golden Chest
+   - Diamond Chest
 
-**planned Timers**
-- General
-  - Fruit Spawn
-  - Silver Chest
-  - Golden Chest
-  - Diamond Chest
-- Bosses
-  - First Sea
-    - Gorilla King
-    - Chef
-    - The Saw
-    - Yeti
-    - Mob Leader
-    - Vice Admiral
-    - Saber Expert
-    - Warden
-    - Chief Warden
-    - Swan
-    - Magma Admiral
-    - Fishman Lord
-    - Wysper
-    - Thunder God
-    - Cyborg (Boss)
-  - Second Sea
-    - Diamond (Boss)
-    - Jeremy
-    - Orbitus
-    - Don Swan
-    - Smoke Admiral
-    - Awakened Ice Admiral
-    - Tide Keeper
-  - Third sea
-    - Stone
-    - Hydra Leader
-    - Kilo Admiral
-    - Captain Elephant
-    - Beautiful Pirate
-    - Longma
-    - Cake Queen
+**V2.0: Timer Improvments**
+- Timer Overlay only Displays While in Roblox
+- Notifications: Receive Notifications when timers are almost/Ready
+- Fruit Spawn Timer: a new timer to track when Fruits will spawn
 
-**Current Features**
-- Clicking a timer will reset it
-- Roll timer saves when app closes
-
-**planned Features**
-- Disable Timers
-- reworked Icons
-- Auto Reset
-- Reset All Button
+*Note: These are tentative plans and may be subject to change.*
