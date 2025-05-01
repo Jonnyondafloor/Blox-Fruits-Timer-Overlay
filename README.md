@@ -53,6 +53,6 @@ Display timers for important events such as: Rolling, Castle Raid, Elite Pirate,
 
 **planned Features**
 - Disable Timers
-- Custom Icons
+- reworked Icons
 - Auto Reset
 - Reset All Button
