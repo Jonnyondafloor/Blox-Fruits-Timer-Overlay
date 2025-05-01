@@ -1,5 +1,11 @@
 # Blox-Fruits-Timer-Overlay
 Display timers for important events such as: Rolling, Castle Raid, Elite Pirate, and Full Moon so you know when things should be happening.
+**features:**
+- Fruit Roll Timer
+- Castle Raid Timer
+- Chest Timers
+- Elite Pirate Timer
+- Full Moon Timer
 
 # Installation
 ## Python (skip if you have python V3.13.3 or above)
