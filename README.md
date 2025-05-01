@@ -7,8 +7,7 @@ Display timers for important events such as: Rolling, Castle Raid, Elite Pirate,
 - Elite Pirates
 - Full Moon
 
-<details>
-**<summary>planned Timers</summary>**
+**planned Timers**
 - General
   - Rolling
   - Castle Raid
@@ -47,7 +46,6 @@ Display timers for important events such as: Rolling, Castle Raid, Elite Pirate,
     - Beautiful Pirate
     - Longma
     - Cake Queen
-</details>
 
 **Current Features**
 - Clicking a timer will reset it
