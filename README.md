@@ -10,6 +10,7 @@ Display timers for important events such as: Rolling, Castle Raid, Elite Pirate,
 **planned Timers**
 - General
   - Rolling
+  - Fruit Spawn
   - Castle Raid
   - Elite Pirates
   - Full Moon
