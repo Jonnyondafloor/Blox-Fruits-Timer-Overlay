@@ -4,6 +4,7 @@ Display Timers for Important Events such as: Rolling, Castle Raids, Elite Pirate
 **Features:**
 - Fruit Roll Timer
 - Castle Raid Timer
+- Fruit Spawn Timer
 - Chest Timers
 - Elite Pirate Timer
 - Full Moon Timer
