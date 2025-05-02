@@ -9,6 +9,9 @@ Display Timers for Important Events such as: Rolling, Castle Raids, Elite Pirate
 - Full Moon Timer
 
 # Installation
+## Requirements
+- Windows
+- 1920x1080 Pixel Resolution Monitor
 ## Python (skip if you have python V3.13.3 or above)
 1. Download the latest version of Python: https://www.python.org/downloads/
 2. Follow the instructions in the installer and make sure you check the box to add to path
