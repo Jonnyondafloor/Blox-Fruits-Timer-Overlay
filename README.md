@@ -40,18 +40,50 @@ Display Timers for Important Events such as: Rolling, Castle Raids, Elite Pirate
   - Full Moon: 3 Hours and 12 Minutes (reset this timer when the full moon rises)
 
 # Roadmap
-**V2.0.1: Image Rework**
-- Rework Images
-    - Rolling
-    - Elite Pirate
-    - Fruit Spawn
+## V2.0.1: Image Rework
+- Rolling Image Rework
+- Elite Pirate Image Rework
+- Fruit Spawn Image Rework
 
-**V2.0.2: Optimization**
-- Optimization
-    - Make timer updater run on main thread using root.after
-    - make timer class only ask for object and it will extract the contents instead of having to do that for the class. this removes repetition.
+## V2.0.2: Optimization
+- Give Timer Class the whole Timer Object instead of unpacking it manually
 
 *Note: These are tentative plans and may be subject to change.*
+
+# ChangeLog
+## V2.0: Timer Improvments
+**Changes**
+- Only Displays while in Roblox
+
+**Additions**
+- Notifications when things are ready
+- Fruit Spawn Timer
+
+**Fixes**
+- Changed Elite Pirate Timer: 525s -> 540s
+- Fixed Flickery Ready Text
+
+## V1.2.1: Image Rework
+- Silver Chest Image Rework
+- Golden Chest Image Rework
+- Diamond Chest Image Rework
+
+## V1.2: New Timers
+- Silver Chest Timer
+- Golden Chest Timer
+- Diamond Chest Timer
+
+## V1.1: Image Rework
+- Rolling Image Rework
+- Castle Raid Image Rework
+- Elite Pirate Image Rework
+- Full Moon Image Rework
+
+## V1.0: New Timers
+- Rolling Timer
+- Castle Raid Timer
+- Elite Pirate Timer
+- Full Moon Timer
 
 # Attribution
 **Notification.wav by Wax_vibe -- https://freesound.org/s/550374/ -- License: Creative Commons 0**
