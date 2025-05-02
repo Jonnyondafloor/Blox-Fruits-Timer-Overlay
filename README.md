@@ -4,11 +4,15 @@ Display Timers for Important Events such as: Rolling, Castle Raids, Elite Pirate
 **Features:**
 - Fruit Roll Timer
 - Castle Raid Timer
+- Fruit Spawn Timer
 - Chest Timers
 - Elite Pirate Timer
 - Full Moon Timer
 
 # Installation
+## Requirements
+- Windows
+- 1920x1080 Pixel Resolution Monitor
 ## Python (skip if you have python V3.13.3 or above)
 1. Download the latest version of Python: https://www.python.org/downloads/
 2. Follow the instructions in the installer and make sure you check the box to add to path
@@ -47,3 +51,6 @@ Display Timers for Important Events such as: Rolling, Castle Raids, Elite Pirate
   - Elite Pirate
 
 *Note: These are tentative plans and may be subject to change.*
+
+# Attribution
+**Notification.wav by Wax_vibe -- https://freesound.org/s/550374/ -- License: Creative Commons 0**

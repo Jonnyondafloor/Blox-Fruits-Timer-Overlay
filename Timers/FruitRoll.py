@@ -3,6 +3,8 @@ import time
 import json
 
 imagePath = 'Images\\FruitRoll.png'
+noti_title = 'You can now Roll a Fruit.'
+noti_desc = 'The Blox Fruit Gacha has Something for You :>'
 
 def delay_method(savedatajsonpath):
     with open(savedatajsonpath, 'r') as f:
@@ -20,4 +22,4 @@ def reset_method(savedatajsonpath):
         json.dump(savedata_json, f, indent=4)
     return end
 
-image = ImageTk.PhotoImage(Image.open(imagePath).resize((50, 50)))
+image = ImageTk.PhotoImage(Image.open(imagePath).resize((50, 60)))

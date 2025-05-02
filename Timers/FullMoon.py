@@ -2,6 +2,8 @@ import time
 from PIL import Image, ImageTk
 
 imagePath = 'Images\\FullMoon.png'
+noti_title = 'The Full Moon has Risen'
+noti_desc = 'The Temple of Time is Ready for Another Trial'
 
 def delay_method(_):
     now = time.time()
@@ -15,4 +17,4 @@ def reset_method(_):
     end = now + delay
     return end
 
-image = ImageTk.PhotoImage(Image.open(imagePath).resize((50, 50)))
+image = ImageTk.PhotoImage(Image.open(imagePath).resize((50, 60)))

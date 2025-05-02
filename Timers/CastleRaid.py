@@ -2,6 +2,8 @@ import time
 from PIL import Image, ImageTk
 
 imagePath = 'Images\\CastleRaid.png'
+noti_title = 'The Castle is Under Attack!'
+noti_desc = 'Defeat their Leader and Claim its Treasures'
 
 def delay_method(_):
     now = time.time()
@@ -15,4 +17,4 @@ def reset_method(_):
     end = now + delay
     return end
 
-image = ImageTk.PhotoImage(Image.open(imagePath).resize((50, 50)))
+image = ImageTk.PhotoImage(Image.open(imagePath).resize((50, 60)))
