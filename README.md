@@ -40,15 +40,15 @@ Display Timers for Important Events such as: Rolling, Castle Raids, Elite Pirate
   - Full Moon: 3 Hours and 12 Minutes (reset this timer when the full moon rises)
 
 # Roadmap
-**V2.0: Timer Improvments**
-- Timer Overlay only Displays While in Roblox
-- Notifications: Receive Notifications when timers are almost/Ready
-- Fruit Spawn Timer: a new timer to track when Fruits will spawn
-
 **V2.0.1: Image Rework**
 - Rework Images
-  - Rolling
-  - Elite Pirate
+    - Rolling
+    - Elite Pirate
+    - Fruit Spawn
+**V2.0.2: Optimization**
+- Optimization
+    - Make timer updater run on main thread using root.after
+    - make timer class only ask for object and it will extract the contents instead of having to do that for the class. this removes repetition.
 
 *Note: These are tentative plans and may be subject to change.*
 
