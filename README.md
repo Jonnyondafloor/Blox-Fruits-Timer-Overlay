@@ -50,3 +50,6 @@ Display Timers for Important Events such as: Rolling, Castle Raids, Elite Pirate
   - Elite Pirate
 
 *Note: These are tentative plans and may be subject to change.*
+
+# Attribution
+**Notification.wav by Wax_vibe -- https://freesound.org/s/550374/ -- License: Creative Commons 0**
