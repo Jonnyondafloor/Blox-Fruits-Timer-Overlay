@@ -45,6 +45,7 @@ Display Timers for Important Events such as: Rolling, Castle Raids, Elite Pirate
     - Rolling
     - Elite Pirate
     - Fruit Spawn
+
 **V2.0.2: Optimization**
 - Optimization
     - Make timer updater run on main thread using root.after
