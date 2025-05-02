@@ -2,6 +2,8 @@ import time
 from PIL import Image, ImageTk
 
 imagePath = 'Images\\DiamondChest.png'
+noti_title = 'Diamond Chest is Ready'
+noti_desc = 'The Diamond Chest Route is Ready.\ngo Collect your money!'
 
 def delay_method(_):
     now = time.time()
