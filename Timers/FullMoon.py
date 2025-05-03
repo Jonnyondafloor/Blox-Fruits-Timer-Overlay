@@ -11,7 +11,7 @@ def cycle_moon(cycles: int | float = 1):
 
 def delay_method(_):
     now = time.time()
-    delay = cycle_moon(2) - 6*60 # set to sunrise
+    delay = cycle_moon(2) - 5*60 # set to sunrise
     end = now + delay
     return end
 
