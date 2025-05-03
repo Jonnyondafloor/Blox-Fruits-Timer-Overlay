@@ -7,7 +7,6 @@ import math
 import winsound
 
 saveDataJsonPath = 'SaveData.json'
-window_whitelist = ['Roblox', 'tk']
 
 class Timer:
     def __init__(self,
@@ -144,7 +143,7 @@ def lock_to_roblox(master: tk.Tk):
         if not active_window:
             return
         
-        if active_window.title in window_whitelist:
+        if active_window.title == 'Roblox':
             master.deiconify()
         else:
             master.withdraw()
