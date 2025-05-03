@@ -6,7 +6,7 @@ noti_title = 'A Fruit has Spawned'
 noti_desc = 'Search the Sea for the Fruit that be'
 
 def is_week_day():
-    day_of_week = time.localtime().tm_wday
+    day_of_week = time.gmtime().tm_wday
     if day_of_week < 5:
         return True
     else:
