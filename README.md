@@ -37,19 +37,6 @@ Display Timers for Important Events such as: Rolling, Castle Raids, Elite Pirate
   - Golden Chest: 6 Minutes (reset this timer when you collect the first golden chest on your route)
   - Diamond Chest: 12 Minutes (reset this timer when you collect the first diamond chest on your route)
   - Elite Pirate: 8 Minutes and 45 Seconds (reset this timer when the elite pirate has been defeated)
-  - Full Moon: 3 Hours and 12 Minutes (reset this timer when the full moon rises)
-
-# Roadmap
-## V2.0.1: Image Rework
-- Rolling Image Rework
-- Elite Pirate Image Rework
-- Fruit Spawn Image Rework
-
-## V2.0.2: Optimization
-- Give Timer Class the whole Timer Object instead of unpacking it manually
-
-*Note: These are tentative plans and may be subject to change.*
-
 # ChangeLog
 ## V2.0: Timer Improvments
 **Changes**
