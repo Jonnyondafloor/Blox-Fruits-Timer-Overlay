@@ -2,8 +2,8 @@ import time
 from PIL import Image, ImageTk
 
 imagePath = 'Images\\FullMoon.png'
-noti_title = 'The Full Moon has Risen'
-noti_desc = 'The Temple of Time is Ready for Another Trial'
+noti_title = 'The Moon will be Full Tonight.'
+noti_desc = 'Race to the danger zones, because its time to hunt kitsune island!'
 
 def delay_method(_):
     now = time.time()
