@@ -33,10 +33,12 @@ Display Timers for Important Events such as: Rolling, Castle Raids, Elite Pirate
 - Reset Timer: Clicking on a Timer's Image will reset the Timer. Below are the Timers and what their Delay is when Reset. As well as when you should Reset Them.
   - Fruit Roll: 2 Hours (reset this timer after rolling a fruit)
   - Castle Raid: 1 Hour and 15 Minutes (reset this timer after the castle raid has been completed)
+  - Fruit Spawn: 1 hour or 45 minutes if its a weekend (Reset this timer after the fruit has been collected or despawned)
   - Silver Chest: 3 Minutes (reset this timer when you collect the first silver chest on your route)
   - Golden Chest: 6 Minutes (reset this timer when you collect the first golden chest on your route)
   - Diamond Chest: 12 Minutes (reset this timer when you collect the first diamond chest on your route)
   - Elite Pirate: 8 Minutes and 45 Seconds (reset this timer when the elite pirate has been defeated)
+  - Full Moon: 3 Hours and 12 Minutes (Reset this timer immediately after ready)
 # ChangeLog
 ## V2.0: Timer Improvments
 **Changes**
