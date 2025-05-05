@@ -4,6 +4,8 @@ from PIL import Image, ImageTk
 imagePath = 'Images\\GoldenChest.png'
 noti_title = 'Golden Chest is Ready'
 noti_desc = 'The Golden Chest Route is Ready.\ngo Collect your money!'
+auto_reset_enabled = False
+auto_reset_delay = 0
 
 def delay_method(_):
     now = time.time()
