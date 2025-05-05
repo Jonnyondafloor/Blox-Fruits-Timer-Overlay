@@ -34,7 +34,7 @@ class Timer:
         self.end_epoch = delay_method(saveDataJsonPath)
 
         self.reset_enabled = auto_reset_enabled
-        self.reset_time = auto_reset_delay
+        self.reset_time = self.end_epoch + auto_reset_delay
 
         self.create_frame()
         updater = threading.Thread(target=self.update_time, daemon=True)
