@@ -7,7 +7,8 @@ import math
 import winsound
 
 saveDataJsonPath = 'SaveData.json'
-window_whitelist = ['Roblox', 'tk']
+app_name = 'Release'
+window_whitelist = ['Roblox', app_name]
 
 class Timer:
     def __init__(self,
@@ -17,7 +18,8 @@ class Timer:
                  notification_description: str, # used for notification
                  delay_method, # A Function that returns the length of time the timer should wait
                  reset_method, # A Function that returns the length of time the timer should wait after clicking reset
-                 auto: int | None = None # time in seconds after the ready that it will reset automatically
+                 auto_reset_enabled: bool,
+                 auto_reset_delay: int
                  ):
         
         self.master = master
@@ -30,6 +32,9 @@ class Timer:
         self.reset_method = reset_method
         self.time = tk.StringVar(master)
         self.end_epoch = delay_method(saveDataJsonPath)
+
+        self.reset_enabled = auto_reset_enabled
+        self.reset_time = auto_reset_delay
 
         self.create_frame()
         updater = threading.Thread(target=self.update_time, daemon=True)
@@ -73,17 +78,21 @@ class Timer:
             self.notified = True
         
         while True:
+            time.sleep(1)
             now = time.time()
             remaining_time = int(self.end_epoch - now)
             if remaining_time > 0:
                 formatted_time = self.format_time(remaining_time)
                 self.master.after(0, self.time.set, formatted_time)
+                continue
+            if self.reset_enabled:
+                if self.reset_time <= now and remaining_time <= 0:
+                    self.reset(1)
             else:
                 self.master.after(0, self.time.set, 'Ready ✅')
-                if not self.notified:
-                    notifications.new_notification(self.title, self.description)
-                    self.notified = True
-            time.sleep(1)
+            if not self.notified:
+                notifications.new_notification(self.title, self.description)
+                self.notified = True
 
 class Notifications:
     def __init__(self, master: tk.Tk):
@@ -155,6 +164,7 @@ def lock_to_roblox(master: tk.Tk):
 
 
 root = tk.Tk()
+root.title(app_name)
 root.overrideredirect(True)
 root.attributes('-topmost', True)
 root.attributes('-transparentcolor', '#010101')
@@ -166,16 +176,16 @@ notifications = Notifications(root)
 from Timers import FruitRoll, CastleRaid, ElitePirate, FullMoon, SilverChest, GoldenChest, DiamondChest, FruitSpawn
 
 # Fruit
-Timer(root, FruitRoll.image, FruitRoll.noti_title, FruitRoll.noti_desc, FruitRoll.delay_method, FruitRoll.reset_method)
-Timer(root, CastleRaid.image, CastleRaid.noti_title, CastleRaid.noti_desc, CastleRaid.delay_method, CastleRaid.reset_method)
-Timer(root, FruitSpawn.image, FruitSpawn.noti_title, FruitSpawn.noti_desc, FruitSpawn.delay_method, FruitSpawn.delay_method)
+Timer(root, FruitRoll.image, FruitRoll.noti_title, FruitRoll.noti_desc, FruitRoll.delay_method, FruitRoll.reset_method, FruitRoll.auto_reset_enabled, FruitRoll.auto_reset_delay)
+Timer(root, CastleRaid.image, CastleRaid.noti_title, CastleRaid.noti_desc, CastleRaid.delay_method, CastleRaid.reset_method, CastleRaid.auto_reset_enabled, CastleRaid.auto_reset_delay)
+Timer(root, FruitSpawn.image, FruitSpawn.noti_title, FruitSpawn.noti_desc, FruitSpawn.delay_method, FruitSpawn.delay_method, FruitSpawn.auto_reset_enabled, FruitSpawn.auto_reset_delay)
 # Money
-Timer(root, SilverChest.image, SilverChest.noti_title, SilverChest.noti_desc, SilverChest.delay_method, SilverChest.reset_method)
-Timer(root, GoldenChest.image, GoldenChest.noti_title, GoldenChest.noti_desc, GoldenChest.delay_method, GoldenChest.reset_method)
-Timer(root, DiamondChest.image, DiamondChest.noti_title, DiamondChest.noti_desc, DiamondChest.delay_method, DiamondChest.reset_method)
+Timer(root, SilverChest.image, SilverChest.noti_title, SilverChest.noti_desc, SilverChest.delay_method, SilverChest.reset_method, SilverChest.auto_reset_enabled, SilverChest.auto_reset_delay)
+Timer(root, GoldenChest.image, GoldenChest.noti_title, GoldenChest.noti_desc, GoldenChest.delay_method, GoldenChest.reset_method, GoldenChest.auto_reset_enabled, GoldenChest.auto_reset_delay)
+Timer(root, DiamondChest.image, DiamondChest.noti_title, DiamondChest.noti_desc, DiamondChest.delay_method, DiamondChest.reset_method, DiamondChest.auto_reset_enabled, DiamondChest.auto_reset_delay)
 # Misc
-Timer(root, ElitePirate.image, ElitePirate.noti_title, ElitePirate.noti_desc, ElitePirate.delay_method, ElitePirate.reset_method)
-Timer(root, FullMoon.image, FullMoon.noti_title, FullMoon.noti_desc, FullMoon.delay_method, FullMoon.reset_method)
+Timer(root, ElitePirate.image, ElitePirate.noti_title, ElitePirate.noti_desc, ElitePirate.delay_method, ElitePirate.reset_method, ElitePirate.auto_reset_enabled, ElitePirate.auto_reset_delay)
+Timer(root, FullMoon.image, FullMoon.noti_title, FullMoon.noti_desc, FullMoon.delay_method, FullMoon.reset_method, FullMoon.auto_reset_enabled, FullMoon.auto_reset_delay)
 
 overlay_lock_thread = threading.Thread(target=lock_to_roblox, args=[root], daemon=True)
 overlay_lock_thread.start()

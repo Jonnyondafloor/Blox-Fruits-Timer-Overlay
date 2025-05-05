@@ -5,6 +5,8 @@ import json
 imagePath = 'Images\\FruitRoll.png'
 noti_title = 'You can now Roll a Fruit.'
 noti_desc = 'The Blox Fruit Gacha has Something for You :>'
+auto_reset_enabled = False
+auto_reset_delay = 0
 
 def delay_method(savedatajsonpath):
     with open(savedatajsonpath, 'r') as f:
