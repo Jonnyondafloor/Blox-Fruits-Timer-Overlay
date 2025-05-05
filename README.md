@@ -1,4 +1,7 @@
 # Blox-Fruits-Timer-Overlay
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/Jonnyondafloor/Blox-Fruits-Timer-Overlay/total)
+[![Zip File Compiler](https://github.com/Jonnyondafloor/Blox-Fruits-Timer-Overlay/actions/workflows/compile-to-zip.yml/badge.svg?branch=main)](https://github.com/Jonnyondafloor/Blox-Fruits-Timer-Overlay/actions/workflows/compile-to-zip.yml)
+
 Display Timers for Important Events such as: Rolling, Castle Raids, Elite Pirates, and the Full Moon. Great for Maximizing Efficiency!
 
 **Features:**
