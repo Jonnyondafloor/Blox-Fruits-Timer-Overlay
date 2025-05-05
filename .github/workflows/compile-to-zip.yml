@@ -1,4 +1,4 @@
-name: Zip Project Files
+name: Zip File Compiler
 
 on:
   push:
