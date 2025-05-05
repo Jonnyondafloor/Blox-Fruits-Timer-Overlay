@@ -18,7 +18,8 @@ class Timer:
                  notification_description: str, # used for notification
                  delay_method, # A Function that returns the length of time the timer should wait
                  reset_method, # A Function that returns the length of time the timer should wait after clicking reset
-                 auto: int | None = None # time in seconds after the ready that it will reset automatically
+                 auto_reset_enabled: bool,
+                 auto_reset_delay: int
                  ):
         
         self.master = master
