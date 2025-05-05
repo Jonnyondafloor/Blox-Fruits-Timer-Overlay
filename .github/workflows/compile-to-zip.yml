@@ -1,0 +1,23 @@
+name: Zip Project Files
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  zip_files:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Create zip archive
+      run: |
+        zip -r project_files.zip Images SFX Timers Blox-Fruits-Timer-Overlay.py SaveData.json requirements.txt
+
+    - name: Upload zip file as artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: project_files
+        path: project_files.zip
