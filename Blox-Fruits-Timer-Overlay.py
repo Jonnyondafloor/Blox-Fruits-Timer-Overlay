@@ -78,17 +78,21 @@ class Timer:
             self.notified = True
         
         while True:
+            time.sleep(1)
             now = time.time()
             remaining_time = int(self.end_epoch - now)
             if remaining_time > 0:
                 formatted_time = self.format_time(remaining_time)
                 self.master.after(0, self.time.set, formatted_time)
+                continue
+            if self.reset_enabled:
+                if self.reset_time <= now and remaining_time <= 0:
+                    self.reset(1)
             else:
                 self.master.after(0, self.time.set, 'Ready ✅')
-                if not self.notified:
-                    notifications.new_notification(self.title, self.description)
-                    self.notified = True
-            time.sleep(1)
+            if not self.notified:
+                notifications.new_notification(self.title, self.description)
+                self.notified = True
 
 class Notifications:
     def __init__(self, master: tk.Tk):
