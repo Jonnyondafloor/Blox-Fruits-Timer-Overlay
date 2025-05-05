@@ -7,7 +7,8 @@ import math
 import winsound
 
 saveDataJsonPath = 'SaveData.json'
-window_whitelist = ['Roblox', 'tk']
+app_name = 'Release'
+window_whitelist = ['Roblox', app_name]
 
 class Timer:
     def __init__(self,
