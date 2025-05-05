@@ -85,9 +85,8 @@ class Timer:
                 formatted_time = self.format_time(remaining_time)
                 self.master.after(0, self.time.set, formatted_time)
                 continue
-            if self.reset_enabled:
-                if self.reset_time <= now and remaining_time <= 0:
-                    self.reset(1)
+            if self.reset_enabled and self.reset_time <= now and remaining_time <= 0:
+                self.reset(1)
             else:
                 self.master.after(0, self.time.set, 'Ready ✅')
             if not self.notified:
