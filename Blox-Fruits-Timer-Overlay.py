@@ -164,6 +164,7 @@ def lock_to_roblox(master: tk.Tk):
 
 
 root = tk.Tk()
+root.title(app_name)
 root.overrideredirect(True)
 root.attributes('-topmost', True)
 root.attributes('-transparentcolor', '#010101')
