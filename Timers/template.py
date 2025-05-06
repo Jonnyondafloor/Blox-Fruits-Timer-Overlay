@@ -1,8 +1,5 @@
-import tkinter as tk
 from PIL import Image, ImageTk
 from typing import Callable
-
-tk.Tk()
 
 class Timer:
     def __init__(self, image_path: str):
