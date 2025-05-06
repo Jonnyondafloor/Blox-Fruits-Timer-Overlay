@@ -9,7 +9,7 @@ def delay_method(_):
 
 def reset_method(_):
     now = time.time()
-    delay = 8*60+45
+    delay = 9*60
     end = now + delay
     return end
 
