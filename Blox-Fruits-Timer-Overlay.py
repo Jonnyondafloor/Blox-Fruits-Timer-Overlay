@@ -12,14 +12,8 @@ window_whitelist = ['Roblox', app_name]
 
 class Timer:
     def __init__(self,
-                 master: tk.Tk | tk.Frame | tk.Toplevel,
-                 image: Image.Image,
-                 notification_title: str, # used for notification
-                 notification_description: str, # used for notification
-                 delay_method, # A Function that returns the length of time the timer should wait
-                 reset_method, # A Function that returns the length of time the timer should wait after clicking reset
-                 auto_reset_enabled: bool,
-                 auto_reset_delay: int
+                 master: tk.Tk | tk.Frame | tk.Toplevel, # Root Tkinter Object
+                 timer: template.Timer # File containing Timer Functions and Constants
                  ):
         
         self.master = master
