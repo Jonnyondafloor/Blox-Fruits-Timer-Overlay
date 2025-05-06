@@ -170,16 +170,16 @@ notifications = Notifications(root)
 from Timers import FruitRoll, CastleRaid, ElitePirate, FullMoon, SilverChest, GoldenChest, DiamondChest, FruitSpawn
 
 # Fruit
-Timer(root, FruitRoll.image, FruitRoll.noti_title, FruitRoll.noti_desc, FruitRoll.delay_method, FruitRoll.reset_method, FruitRoll.auto_reset_enabled, FruitRoll.auto_reset_delay)
-Timer(root, CastleRaid.image, CastleRaid.noti_title, CastleRaid.noti_desc, CastleRaid.delay_method, CastleRaid.reset_method, CastleRaid.auto_reset_enabled, CastleRaid.auto_reset_delay)
-Timer(root, FruitSpawn.image, FruitSpawn.noti_title, FruitSpawn.noti_desc, FruitSpawn.delay_method, FruitSpawn.delay_method, FruitSpawn.auto_reset_enabled, FruitSpawn.auto_reset_delay)
+Timer(root, FruitRoll.get_timer())
+Timer(root, CastleRaid.get_timer())
+Timer(root, FruitSpawn.get_timer())
 # Money
-Timer(root, SilverChest.image, SilverChest.noti_title, SilverChest.noti_desc, SilverChest.delay_method, SilverChest.reset_method, SilverChest.auto_reset_enabled, SilverChest.auto_reset_delay)
-Timer(root, GoldenChest.image, GoldenChest.noti_title, GoldenChest.noti_desc, GoldenChest.delay_method, GoldenChest.reset_method, GoldenChest.auto_reset_enabled, GoldenChest.auto_reset_delay)
-Timer(root, DiamondChest.image, DiamondChest.noti_title, DiamondChest.noti_desc, DiamondChest.delay_method, DiamondChest.reset_method, DiamondChest.auto_reset_enabled, DiamondChest.auto_reset_delay)
+Timer(root, SilverChest.get_timer())
+Timer(root, GoldenChest.get_timer())
+Timer(root, DiamondChest.get_timer())
 # Misc
-Timer(root, ElitePirate.image, ElitePirate.noti_title, ElitePirate.noti_desc, ElitePirate.delay_method, ElitePirate.reset_method, ElitePirate.auto_reset_enabled, ElitePirate.auto_reset_delay)
-Timer(root, FullMoon.image, FullMoon.noti_title, FullMoon.noti_desc, FullMoon.delay_method, FullMoon.reset_method, FullMoon.auto_reset_enabled, FullMoon.auto_reset_delay)
+Timer(root, ElitePirate.get_timer())
+Timer(root, FullMoon.get_timer())
 
 overlay_lock_thread = threading.Thread(target=lock_to_roblox, args=[root], daemon=True)
 overlay_lock_thread.start()
