@@ -18,17 +18,18 @@ class Timer:
         
         self.master = master
 
-        self.image = image
-        self.title = notification_title
-        self.description = notification_description
-        self.notified = False
+        self.image = timer.load_image()
+        self.title = timer.title
+        self.description = timer.description
 
-        self.reset_method = reset_method
+        self.reset_method = timer.reset_method
         self.time = tk.StringVar(master)
-        self.end_epoch = delay_method(saveDataJsonPath)
+        self.end_epoch = timer.delay_method(saveDataJsonPath)
 
-        self.reset_enabled = auto_reset_enabled
-        self.reset_time = self.end_epoch + auto_reset_delay
+        self.reset_enabled = timer.auto_reset_enabled
+        self.reset_time = self.end_epoch + timer.auto_reset_delay
+
+        self.notified = False
 
         self.create_frame()
         updater = threading.Thread(target=self.update_time, daemon=True)
