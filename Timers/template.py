@@ -2,9 +2,8 @@ from PIL import Image, ImageTk
 from typing import Callable
 
 class Timer:
-    def __init__(self, image_path: str):
-        self.image_path = image_path
-        self.image = self._load_image()
+    def __init__(self):
+        self.image_path = 'image_path'
         self.title = ''
         self.description = ''
         self.auto_reset_enabled = True
@@ -12,7 +11,7 @@ class Timer:
         self.delay_method: Callable[[], float] = None
         self.reset_method: Callable[[], float] = None
 
-    def _load_image(self) -> ImageTk.PhotoImage | None:
+    def load_image(self) -> ImageTk.PhotoImage | None:
         try:
             img = Image.open(self.image_path).resize((50, 60))
             return ImageTk.PhotoImage(img)
