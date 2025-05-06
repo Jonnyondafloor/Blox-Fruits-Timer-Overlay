@@ -1,10 +1,10 @@
 import tkinter as tk
 import time
-from PIL import Image
 import threading
 import pygetwindow as gw
 import math
 import winsound
+from Timers import template
 
 saveDataJsonPath = 'SaveData.json'
 app_name = 'Release'
