@@ -1,11 +1,5 @@
+from Timers import template
 import time
-from PIL import Image, ImageTk
-
-imagePath = 'Images\\CastleRaid.png'
-noti_title = 'The Castle is Under Attack!'
-noti_desc = 'Defeat their Leader and Claim its Treasures'
-auto_reset_enabled = True
-auto_reset_delay = 360
 
 def delay_method(_):
     now = time.time()
@@ -19,4 +13,11 @@ def reset_method(_):
     end = now + delay
     return end
 
-image = ImageTk.PhotoImage(Image.open(imagePath).resize((50, 60)))
+def get_timer() -> template.Timer:
+    timer = template.Timer('Images\\CastleRaid.png')
+    timer.title = 'The Castle is Under Attack!'
+    timer.description = 'Defeat their Leader and Claim its Treasures'
+    timer.auto_reset_delay = 360
+    timer.delay_method = delay_method
+    timer.reset_method = reset_method
+    return timer

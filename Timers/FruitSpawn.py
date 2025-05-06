@@ -1,11 +1,5 @@
+from Timers import template
 import time
-from PIL import Image, ImageTk
-
-imagePath = 'Images\\FruitSpawn.png'
-noti_title = 'A Fruit has Spawned'
-noti_desc = 'Search the Sea for the Fruit that be'
-auto_reset_enabled = True
-auto_reset_delay = 1200
 
 def is_week_day():
     day_of_week = time.gmtime().tm_wday
@@ -30,4 +24,11 @@ def reset_method(_):
     end = now + delay
     return end
 
-image = ImageTk.PhotoImage(Image.open(imagePath).resize((50, 60)))
+def get_timer():
+    timer = template.Timer('Images\\FruitSpawn.png')
+    timer.title = 'A Fruit has Spawned'
+    timer.description = 'Search the Sea for the Fruit that be'
+    timer.auto_reset_delay = 1200
+    timer.delay_method = delay_method
+    timer.reset_method = reset_method
+    return timer
