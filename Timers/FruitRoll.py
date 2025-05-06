@@ -19,7 +19,8 @@ def reset_method(savedatajsonpath):
     return end
 
 def get_timer():
-    timer = template.Timer('Images\\FruitRoll.png')
+    timer = template.Timer()
+    timer.image_path = 'Images\\FruitRoll.png'
     timer.title = 'You can now Roll a Fruit.'
     timer.description = 'The Blox Fruit Gacha has Something for You :>'
     timer.auto_reset_enabled = False

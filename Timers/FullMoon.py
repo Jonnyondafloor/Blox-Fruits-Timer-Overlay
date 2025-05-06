@@ -18,7 +18,8 @@ def reset_method(_):
     return end
 
 def get_timer():
-    timer = template.Timer('Images\\FullMoon.png')
+    timer = template.Timer()
+    timer.image_path = 'Images\\FullMoon.png'
     timer.title = 'The Moon will be Full Tonight.'
     timer.description = 'Race to the danger zones, because its time to hunt kitsune island!'
     timer.auto_reset_delay = 0

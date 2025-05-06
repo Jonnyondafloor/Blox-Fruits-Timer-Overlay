@@ -14,7 +14,8 @@ def reset_method(_):
     return end
 
 def get_timer():
-    timer = template.Timer('Images\\ElitePirate.png')
+    timer = template.Timer()
+    timer.image_path = 'Images\\ElitePirate.png'
     timer.title = 'The Elite Pirate Has Arrived'
     timer.description = 'Show him who is Really Elite'
     timer.auto_reset_enabled = False

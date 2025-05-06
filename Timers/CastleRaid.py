@@ -14,7 +14,8 @@ def reset_method(_):
     return end
 
 def get_timer() -> template.Timer:
-    timer = template.Timer('Images\\CastleRaid.png')
+    timer = template.Timer()
+    timer.image_path = 'Images\\CastleRaid.png'
     timer.title = 'The Castle is Under Attack!'
     timer.description = 'Defeat their Leader and Claim its Treasures'
     timer.auto_reset_delay = 360

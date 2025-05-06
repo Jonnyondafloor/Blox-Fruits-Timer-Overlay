@@ -14,7 +14,8 @@ def reset_method(_):
     return end
 
 def get_timer():
-    timer = template.Timer('Images\\GoldenChest.png')
+    timer = template.Timer()
+    timer.image_path = 'Images\\GoldenChest.png'
     timer.title = 'Golden Chest is Ready'
     timer.description = 'The Golden Chest Route is Ready.\ngo Collect your money!'
     timer.auto_reset_enabled = False

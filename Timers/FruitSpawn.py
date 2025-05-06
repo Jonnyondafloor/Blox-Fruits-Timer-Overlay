@@ -25,7 +25,8 @@ def reset_method(_):
     return end
 
 def get_timer():
-    timer = template.Timer('Images\\FruitSpawn.png')
+    timer = template.Timer()
+    timer.image_path = 'Images\\FruitSpawn.png'
     timer.title = 'A Fruit has Spawned'
     timer.description = 'Search the Sea for the Fruit that be'
     timer.auto_reset_delay = 1200
