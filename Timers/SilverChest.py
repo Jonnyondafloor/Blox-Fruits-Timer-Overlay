@@ -1,11 +1,5 @@
+from Timers import template
 import time
-from PIL import Image, ImageTk
-
-imagePath = 'Images\\SilverChest.png'
-noti_title = 'Silver Chest is Ready'
-noti_desc = 'The Silver Chest Route is Ready.\ngo Collect your money!'
-auto_reset_enabled = False
-auto_reset_delay = 0
 
 def delay_method(_):
     now = time.time()
@@ -19,4 +13,12 @@ def reset_method(_):
     end = now + delay
     return end
 
-image = ImageTk.PhotoImage(Image.open(imagePath).resize((50, 60)))
+def get_timer():
+    timer = template.Timer()
+    timer.image_path = 'Images\\SilverChest.png'
+    timer.title = 'Silver Chest is Ready'
+    timer.description = 'The Silver Chest Route is Ready.\ngo Collect your money!'
+    timer.auto_reset_enabled = False
+    timer.delay_method = delay_method
+    timer.reset_method = reset_method
+    return timer

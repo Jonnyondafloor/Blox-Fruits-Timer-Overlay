@@ -1,10 +1,10 @@
 import tkinter as tk
 import time
-from PIL import Image
 import threading
 import pygetwindow as gw
 import math
 import winsound
+from Timers import template
 
 saveDataJsonPath = 'SaveData.json'
 app_name = 'Release'
@@ -12,29 +12,24 @@ window_whitelist = ['Roblox', app_name]
 
 class Timer:
     def __init__(self,
-                 master: tk.Tk | tk.Frame | tk.Toplevel,
-                 image: Image.Image,
-                 notification_title: str, # used for notification
-                 notification_description: str, # used for notification
-                 delay_method, # A Function that returns the length of time the timer should wait
-                 reset_method, # A Function that returns the length of time the timer should wait after clicking reset
-                 auto_reset_enabled: bool,
-                 auto_reset_delay: int
+                 master: tk.Tk | tk.Frame | tk.Toplevel, # Root Tkinter Object
+                 timer: template.Timer # File containing Timer Functions and Constants
                  ):
         
         self.master = master
 
-        self.image = image
-        self.title = notification_title
-        self.description = notification_description
-        self.notified = False
+        self.image = timer.load_image()
+        self.title = timer.title
+        self.description = timer.description
 
-        self.reset_method = reset_method
+        self.reset_method = timer.reset_method
         self.time = tk.StringVar(master)
-        self.end_epoch = delay_method(saveDataJsonPath)
+        self.end_epoch = timer.delay_method(saveDataJsonPath)
 
-        self.reset_enabled = auto_reset_enabled
-        self.reset_time = self.end_epoch + auto_reset_delay
+        self.reset_enabled = timer.auto_reset_enabled
+        self.reset_time = self.end_epoch + timer.auto_reset_delay
+
+        self.notified = False
 
         self.create_frame()
         updater = threading.Thread(target=self.update_time, daemon=True)
@@ -175,16 +170,16 @@ notifications = Notifications(root)
 from Timers import FruitRoll, CastleRaid, ElitePirate, FullMoon, SilverChest, GoldenChest, DiamondChest, FruitSpawn
 
 # Fruit
-Timer(root, FruitRoll.image, FruitRoll.noti_title, FruitRoll.noti_desc, FruitRoll.delay_method, FruitRoll.reset_method, FruitRoll.auto_reset_enabled, FruitRoll.auto_reset_delay)
-Timer(root, CastleRaid.image, CastleRaid.noti_title, CastleRaid.noti_desc, CastleRaid.delay_method, CastleRaid.reset_method, CastleRaid.auto_reset_enabled, CastleRaid.auto_reset_delay)
-Timer(root, FruitSpawn.image, FruitSpawn.noti_title, FruitSpawn.noti_desc, FruitSpawn.delay_method, FruitSpawn.delay_method, FruitSpawn.auto_reset_enabled, FruitSpawn.auto_reset_delay)
+Timer(root, FruitRoll.get_timer())
+Timer(root, CastleRaid.get_timer())
+Timer(root, FruitSpawn.get_timer())
 # Money
-Timer(root, SilverChest.image, SilverChest.noti_title, SilverChest.noti_desc, SilverChest.delay_method, SilverChest.reset_method, SilverChest.auto_reset_enabled, SilverChest.auto_reset_delay)
-Timer(root, GoldenChest.image, GoldenChest.noti_title, GoldenChest.noti_desc, GoldenChest.delay_method, GoldenChest.reset_method, GoldenChest.auto_reset_enabled, GoldenChest.auto_reset_delay)
-Timer(root, DiamondChest.image, DiamondChest.noti_title, DiamondChest.noti_desc, DiamondChest.delay_method, DiamondChest.reset_method, DiamondChest.auto_reset_enabled, DiamondChest.auto_reset_delay)
+Timer(root, SilverChest.get_timer())
+Timer(root, GoldenChest.get_timer())
+Timer(root, DiamondChest.get_timer())
 # Misc
-Timer(root, ElitePirate.image, ElitePirate.noti_title, ElitePirate.noti_desc, ElitePirate.delay_method, ElitePirate.reset_method, ElitePirate.auto_reset_enabled, ElitePirate.auto_reset_delay)
-Timer(root, FullMoon.image, FullMoon.noti_title, FullMoon.noti_desc, FullMoon.delay_method, FullMoon.reset_method, FullMoon.auto_reset_enabled, FullMoon.auto_reset_delay)
+Timer(root, ElitePirate.get_timer())
+Timer(root, FullMoon.get_timer())
 
 overlay_lock_thread = threading.Thread(target=lock_to_roblox, args=[root], daemon=True)
 overlay_lock_thread.start()

@@ -1,12 +1,6 @@
-from PIL import Image, ImageTk
+from Timers import template
 import time
 import json
-
-imagePath = 'Images\\FruitRoll.png'
-noti_title = 'You can now Roll a Fruit.'
-noti_desc = 'The Blox Fruit Gacha has Something for You :>'
-auto_reset_enabled = False
-auto_reset_delay = 0
 
 def delay_method(savedatajsonpath):
     with open(savedatajsonpath, 'r') as f:
@@ -24,4 +18,12 @@ def reset_method(savedatajsonpath):
         json.dump(savedata_json, f, indent=4)
     return end
 
-image = ImageTk.PhotoImage(Image.open(imagePath).resize((50, 60)))
+def get_timer():
+    timer = template.Timer()
+    timer.image_path = 'Images\\FruitRoll.png'
+    timer.title = 'You can now Roll a Fruit.'
+    timer.description = 'The Blox Fruit Gacha has Something for You :>'
+    timer.auto_reset_enabled = False
+    timer.delay_method = delay_method
+    timer.reset_method = reset_method
+    return timer
