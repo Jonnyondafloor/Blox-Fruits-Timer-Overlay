@@ -103,13 +103,13 @@ class Notifications:
         tk.Label(self.root, textvariable=self.description, font=('Arial', 12), fg='white', bg='#000000', wraplength=300, justify='left').pack(anchor='sw')
         self.notification_queue = []
 
-        notifier_thread = threading.Thread(target=self.display_notifications, daemon=True)
+        notifier_thread = threading.Thread(target=self._display_notifications, daemon=True)
         notifier_thread.start()
     
     def new_notification(self, title: str, description: str):
         self.notification_queue.append({'Title': title, 'Description': description})
     
-    def display_notifications(self):
+    def _display_notifications(self):
         while True:
             if self.notification_queue and self.notification_queue[0]:
                 self.title.set(self.notification_queue[0]['Title'])
