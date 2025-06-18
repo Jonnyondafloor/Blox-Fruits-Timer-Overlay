@@ -141,7 +141,7 @@ class Notifications:
                 del self.notification_queue[0]
             time.sleep(2.5)
 
-def lock_to_roblox(master: tk.Tk):
+def _lock_to_roblox(master: tk.Tk):
     def check_active_window():
         active_window = gw.getActiveWindow()
         if not active_window:
@@ -181,7 +181,7 @@ Timer(root, DiamondChest.get_timer())
 Timer(root, ElitePirate.get_timer())
 Timer(root, FullMoon.get_timer())
 
-overlay_lock_thread = threading.Thread(target=lock_to_roblox, args=[root], daemon=True)
+overlay_lock_thread = threading.Thread(target=_lock_to_roblox, args=[root], daemon=True)
 overlay_lock_thread.start()
 
 root.mainloop()
