@@ -155,6 +155,26 @@ def _lock_to_roblox(master: tk.Tk):
         master.after(500, check_active_window)
     master.after(0, check_active_window)
 
+def _restock_notification(master: tk.Tk):
+    notified_hour = None
+    advanced_notified_hour = None
+    def check_hour():
+        nonlocal notified_hour
+        nonlocal advanced_notified_hour
+        utc = time.gmtime()
+        restocked = utc.tm_hour % 4 == 0
+        notified = utc.tm_hour == notified_hour
+        advanced_restocked = utc.tm_hour % 2 == 0
+        advanced_notified = utc.tm_hour == advanced_notified_hour
+        if restocked and not notified:
+            notifications.new_notification('Fruit Dealer Restocked', 'The Blox Fruit Dealer has Restocked')
+            notified_hour = utc.tm_hour
+        if advanced_restocked and not advanced_notified:
+            notifications.new_notification('Advanced Fruit Dealer Restocked', 'The Advanced Blox Fruit Dealer has Restocked')
+            advanced_notified_hour = utc.tm_hour
+        master.after(10000, check_hour)
+    master.after(0, check_hour)
+
 
 
 root = tk.Tk()
@@ -180,6 +200,8 @@ Timer(root, DiamondChest.get_timer())
 # Misc
 Timer(root, ElitePirate.get_timer())
 Timer(root, FullMoon.get_timer())
+
+_restock_notification(root)
 
 overlay_lock_thread = threading.Thread(target=_lock_to_roblox, args=[root], daemon=True)
 overlay_lock_thread.start()
