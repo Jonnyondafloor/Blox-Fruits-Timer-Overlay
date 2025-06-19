@@ -187,7 +187,7 @@ root.config(bg='#010101')
 
 notifications = Notifications(root)
 
-from Timers import FruitRoll, CastleRaid, ElitePirate, FullMoon, SilverChest, GoldenChest, DiamondChest, FruitSpawn
+from Timers import FruitRoll, CastleRaid, ElitePirate, FullMoon, SilverChest, GoldenChest, DiamondChest, FruitSpawn, GodsChaliceChest
 
 # Fruit
 Timer(root, FruitRoll.get_timer())
@@ -200,6 +200,7 @@ Timer(root, DiamondChest.get_timer())
 # Misc
 Timer(root, ElitePirate.get_timer())
 Timer(root, FullMoon.get_timer())
+Timer(root, GodsChaliceChest.get_timer())
 
 _restock_notification(root)
 
